@@ -1,0 +1,13 @@
+application,indicator_type,coverage
+spark,SYN,0.32925
+spark,Connection,0.487
+spark,TSO,0.0
+tensorflow,SYN,0.352
+tensorflow,Connection,0.5235
+tensorflow,TSO,0.0
+kafka,SYN,0.0
+kafka,Connection,0.0
+kafka,TSO,0.72075
+redis,SYN,0.0
+redis,Connection,0.0
+redis,TSO,0.709

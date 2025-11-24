@@ -1,0 +1,63 @@
+{
+  "config": {
+    "total_events": 16000,
+    "applications": [
+      "spark",
+      "tensorflow",
+      "kafka",
+      "redis"
+    ],
+    "controllers": [
+      "no_control",
+      "dibs",
+      "ecn",
+      "hpcc",
+      "apex"
+    ]
+  },
+  "results": {
+    "no_control": {
+      "p99_latency_us": 2229.598096145312,
+      "mean_latency_us": 1161.690714841372,
+      "drop_rate": 0.027943683824237196,
+      "throughput_gbps": 84.88858123982203,
+      "std_p99": 32.45987088131333
+    },
+    "dibs": {
+      "p99_latency_us": 1929.6107628316754,
+      "mean_latency_us": 1008.6198887052329,
+      "drop_rate": 0.012018715778827956,
+      "throughput_gbps": 86.1200123364827,
+      "std_p99": 17.116709514411802
+    },
+    "ecn": {
+      "p99_latency_us": 1891.013625981973,
+      "mean_latency_us": 987.7250621652922,
+      "drop_rate": 0.008148889608554134,
+      "throughput_gbps": 86.02564200085664,
+      "std_p99": 16.023602219643394
+    },
+    "hpcc": {
+      "p99_latency_us": 1844.5542248174297,
+      "mean_latency_us": 950.8987818878462,
+      "drop_rate": 0.005047944882140975,
+      "throughput_gbps": 86.76202173703669,
+      "std_p99": 17.15932376528371
+    },
+    "apex": {
+      "p99_latency_us": 1118.5878910666959,
+      "mean_latency_us": 660.8954246832881,
+      "drop_rate": 0.00027260245229375886,
+      "throughput_gbps": 88.1237578897159,
+      "std_p99": 13.311729268570419,
+      "coverage": 0.780375,
+      "events_with_indicators": 12486
+    }
+  },
+  "improvements": {
+    "dibs": 13.454771684290368,
+    "ecn": 15.185896989628214,
+    "hpcc": 17.269653754798835,
+    "apex": 49.8300661002272
+  }
+}
