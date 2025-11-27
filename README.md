@@ -8,7 +8,7 @@
 
 ---
 
-## 🎯 What is APEX?
+## What is APEX?
 
 APEX is a unified simulation framework that demonstrates the feasibility of **proactive microburst mitigation** through early indicator detection. Unlike reactive approaches that respond after congestion begins, APEX predicts microbursts 45-60 microseconds before they occur, enabling preemptive control.
 
@@ -20,7 +20,7 @@ APEX is a unified simulation framework that demonstrates the feasibility of **pr
 
 ---
 
-## 📦 What's Included
+## What's Included
 
 ### Complete Unified Implementation
 - **Step 1:** Event generation (16,000 synthetic microbursts)
@@ -35,7 +35,7 @@ APEX is a unified simulation framework that demonstrates the feasibility of **pr
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -106,14 +106,12 @@ apex               1256       0.06%        95.0      (+33%)
 
 ======================================================================
 KEY RESULTS:
-  🎯 APEX improvement over baseline: 33.0%
-  🎯 APEX improvement over HPCC: 15.4%
-  🎯 Drop rate reduction: 1.5x
+  APEX improvement over baseline: 33.0%
+  APEX improvement over HPCC: 15.4%
+  Drop rate reduction: 1.5x
 ======================================================================
 
-✅ Simulation Complete!
-📊 Data files ready in data/ directory
-📄 Ready for paper writing!
+
 ```
 
 ### Generated Data Files
@@ -126,12 +124,12 @@ All data exported to `data/` directory:
 | `lead_times.csv` | 71 KB | Lead time distributions | Figure 2 |
 | `indicator_coverage.csv` | 431 B | Coverage per app/indicator | Figure 3 |
 | `false_positives.csv` | 3.4 KB | False positive analysis | Figure 4 |
-| **`baseline_comparison.csv`** | **3.3 KB** | **Performance comparison** | **Figure 7** ⭐ |
+| **`baseline_comparison.csv`** | **3.3 KB** | **Performance comparison** | **Figure 7**  |
 | `summary.json` | 2 KB | Complete summary statistics | - |
 
 ---
 
-## 📊 Main Results
+## Main Results
 
 ### Performance Comparison (Figure 7 Data)
 
@@ -141,7 +139,7 @@ All data exported to `data/` directory:
 | DIBS | 1569 | 1.2% | 16% |
 | ECN | 1555 | 0.8% | 17% |
 | HPCC | 1486 | 0.5% | 21% |
-| **APEX** | **1256** | **0.06%** | **33%** ⭐ |
+| **APEX** | **1256** | **0.06%** | **33%**  |
 
 ### Lead Time Distribution (Figure 2 Data)
 
@@ -152,7 +150,7 @@ All data exported to `data/` directory:
 | Kafka | 55.0 | 53.2 | 88.0 |
 | Redis | 50.0 | 48.6 | 76.0 |
 
-**All values >> RTT (10μs) → Proactive control feasible! ✅**
+**All values >> RTT (10μs) → Proactive control feasible!**
 
 ### Indicator Coverage (Figure 3 Data)
 
@@ -165,7 +163,7 @@ All data exported to `data/` directory:
 
 ---
 
-## 🔬 How It Works
+## How It Works
 
 ### 1. Event Generation (Step 1)
 
@@ -235,7 +233,7 @@ Exports:
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```
 APEX Unified Simulator
@@ -265,26 +263,11 @@ APEX Unified Simulator
     └── Performance metrics
 ```
 
----
 
-## 🎓 For SIGMETRICS Paper
-
-### Section 3: System Design
-Use `APEXSimulator` class architecture to explain system design.
-
-### Section 5: Implementation  
-Reference the unified simulator code (600+ lines, single file).
-
-### Section 6: Evaluation
-Use generated CSV files to create all figures:
-- **Figure 2:** Lead time CDF (from `lead_times.csv`)
-- **Figure 3:** Indicator coverage (from `indicator_coverage.csv`)
-- **Figure 4:** False positives (from `false_positives.csv`)
-- **Figure 7:** Baseline comparison (from `baseline_comparison.csv`) ⭐
 
 ---
 
-## 💡 Key Features
+##  Key Features
 
 ### Application-Specific Modeling
 Each application has empirically-derived parameters:
@@ -311,7 +294,7 @@ All data needed for paper:
 
 ---
 
-## 📊 Customization
+## Customization
 
 ### Change Simulation Parameters
 
@@ -349,14 +332,14 @@ simulator.controller_factors[ControllerType.CUSTOM] = {
 
 ---
 
-## 🧪 Validation
+## Validation
 
 ### All Results Validated
 
-✅ **Lead times:** 45-60μs (theory: ≥2×RTT) → 45-60 >> 10μs ✅  
-✅ **Coverage:** 85%+ (theory: ≥75%) → 85% ✅  
-✅ **Improvement:** 33% (theory: 30-35%) → 33% ✅  
-✅ **False positives:** <25% (theory: ≤25%) → 4-25% ✅
+✅ **Lead times:** 45-60μs (theory: ≥2×RTT) → 45-60 >> 10μs   
+✅ **Coverage:** 85%+ (theory: ≥75%) → 85%  
+✅ **Improvement:** 33% (theory: 30-35%) → 33% 
+✅ **False positives:** <25% (theory: ≤25%) → 4-25% 
 
 ### Reproducible
 
@@ -369,7 +352,7 @@ Same seed → Same results every time!
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 ### Class Reference
 
@@ -391,7 +374,7 @@ Configuration dataclass with all parameters.
 
 ---
 
-## 🎯 Workflow
+## Workflow
 
 ### 1. Run Simulation
 ```bash
@@ -404,7 +387,7 @@ ls -lh data/
 # Should see 6 CSV files + 1 JSON file
 ```
 
-### 3. Use Data in Paper
+### 3. Use Data
 ```python
 import pandas as pd
 
@@ -432,29 +415,15 @@ plt.savefig("figures/lead_time_cdf.pdf")
 
 ---
 
-## 🏆 Success Metrics
 
-### Code Quality
-✅ 600+ lines of clean, documented code  
-✅ Single file, easy to understand  
-✅ No complex dependencies  
-✅ Production-ready quality
 
-### Scientific Rigor
-✅ 16,000 simulated events  
-✅ 4 applications tested  
-✅ 5 controllers compared  
-✅ All claims validated
 
-### Paper Readiness
-✅ All figures have data  
-✅ All claims have numbers  
-✅ All results reproducible  
-✅ Ready to write!
+
+
 
 ---
 
-## 📧 Support
+## Support
 
 ### Questions?
 1. Check the code comments in `apex_simulator.py`
@@ -466,33 +435,11 @@ plt.savefig("figures/lead_time_cdf.pdf")
 - Check Python version (3.8+)
 - Ensure write permissions for `data/` directory
 
----
-
-## 🗓️ Timeline
-
-**Now:** Complete simulation ready  
-**Week 1:** Generate figures from CSV files  
-**Week 2-3:** Write paper draft  
-**Week 4:** Submit to SIGMETRICS!
-
----
-
-## ✅ Quality Checklist
-
-- [x] Event generation (Step 1)
-- [x] Network simulation (Step 2)
-- [x] Controller comparison (Step 3)
-- [x] Data export (Step 4)
-- [x] All 16,000 events generated
-- [x] All 5 controllers compared
-- [x] All data files exported
-- [x] Main result validated (33% improvement)
-- [x] All claims proven with data
-- [x] Ready for paper writing
 
 ---
 
 **APEX: Analytical Platform for Early eXposure**  
-*Complete Unified Simulator for SIGMETRICS 2026*
 
-**Ready to write the paper! 🎉**
+
+## Contact
+[Hana] — [hanapasandi@eecs.berkeley.edu]
